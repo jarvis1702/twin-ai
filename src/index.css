@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --color-primary: #818cf8;
+  /* Soft Indigo */
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #c4b5fd;
+  /* Lavender */
+  --color-secondary-foreground: #1e1b4b;
+
+  --color-accent: #99f6e4;
+  /* Mint */
+  --color-accent-foreground: #0f172a;
+
+  --color-happy: #fef08a;
+  /* Soft Yellow */
+  --color-emotional: #fda4af;
+  /* Rose */
+  --color-sad: #bfdbfe;
+  /* Muted Blue - slightly lighter */
+  --color-calm: #86efac;
+  /* Green */
+
+  --color-background: #f8fafc;
+  /* Slate 50 */
+  --color-foreground: #0f172a;
+  /* Slate 900 */
+
+  --color-card: #ffffff;
+  --color-card-foreground: #0f172a;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animation Utilities */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv11", "ss01";
+  }
+}
